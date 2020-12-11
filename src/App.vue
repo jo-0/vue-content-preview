@@ -33,9 +33,10 @@ export default {
     },
     methods: {
         showPreview(user) {
-            // if (this.isPreviewActive && user.id === this.user.id) {
-            //     this.isPreviewActive = false;
-            // }
+            if (this.isPreviewActive && user.id === this.user.id) {
+                this.isPreviewActive = false;
+                return;
+            }
             this.isPreviewActive = true;
             this.user = user;
         }
